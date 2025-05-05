@@ -54,10 +54,13 @@ public class Employee {
     }
 
     public float getOvertimeHours() {
-        float hoursWorked = getRegularHours(), hoursOver = 0.0f, payRate = getPayRate(), overTimePayRate = getPayRate() * 1.5f, overTimePay = 0.0f;
-        hoursOver = hoursWorked - 40.0f;
-        overTimePay = hoursOver * overTimePayRate;
-
+        float hoursWorked = getHoursWorked(), hoursOver = 0.0f, payRate = getPayRate(), overTimePayRate = getPayRate() * 1.5f, overTimePay = 0.0f;
+        if (hoursWorked > 40.0f) {
+            hoursOver = hoursWorked - 40.0f;
+            overTimePay = hoursOver * overTimePayRate;
+        } else {
+            return overTimePay;
+        }
         return overTimePay;
     }
 
