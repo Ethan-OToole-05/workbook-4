@@ -13,9 +13,8 @@ public class Reservation {
         this.weekendStatus = false;
     }
 
-    public Reservation(String roomType, float price, int numberOfNights, boolean weekendStatus) {
+    public Reservation(String roomType, int numberOfNights, boolean weekendStatus) {
         this.roomType = roomType;
-        this.price = price;
         this.numberOfNights = numberOfNights;
         this.weekendStatus = weekendStatus;
     }
@@ -49,7 +48,28 @@ public class Reservation {
     }
 
     public float getReservationTotal() {
-        //Do math to get the total price for the reservation.
-        return 0.0f;
+        String roomType = getRoomType();
+        float pricePerNight = getPrice();
+        int numberOfNights = getNumberOfNights();
+        boolean isWeekend = isWeekendStatus();
+        float total;
+        if(roomType.equalsIgnoreCase("king")) {
+            pricePerNight = 139.00f;
+        } else if (roomType.equalsIgnoreCase("double")) {
+            pricePerNight = 124.00f;
+        }
+        if(isWeekend) {
+            float weekendFee;
+            weekendFee = pricePerNight * 0.10f;
+        }
+
+        total = pricePerNight * numberOfNights;
+
+        return total;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Your total for a " + roomType + " type room. For " + numberOfNights + " night(s) will be a total of: $" + getReservationTotal());
     }
 }

@@ -58,5 +58,9 @@ public class Employee {
         return 0.0f;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Employee Id: %d | Name: %s | Department: %s | Pay Rate : $%.2f | Hours Worked: %.2f", employeeId, name, department, payRate, hoursWorked);
+    }
 
 }

@@ -39,4 +39,9 @@ public class Room {
     public boolean isAvailable(){
         return this.occupiedStatus;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Number of beds: %s | Price a night: $%.2f | Occupied: %s | Clean Status: %s", beds, price, occupiedStatus, cleanStatus);
+    }
 }
