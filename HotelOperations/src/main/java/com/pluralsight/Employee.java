@@ -15,6 +15,14 @@ public class Employee {
         this.hoursWorked = 0.0f;
     }
 
+    public Employee(String name, String department, float payRate, float hoursWorked) {
+        this.employeeId = (int) (Math.random() * 1000) + 1;
+        this.name = name;
+        this.department = department;
+        this.payRate = payRate;
+        this.hoursWorked = hoursWorked;
+    }
+
     public int getEmployeeId() {
         return employeeId;
     }
@@ -34,7 +42,7 @@ public class Employee {
     public float getHoursWorked() {
         return hoursWorked;
     }
-    
+
     public float getRegularHours() {
         //Get the amount of hoursWorked that is NOT overtime
         return 0.0f;

@@ -13,6 +13,13 @@ public class Reservation {
         this.weekendStatus = false;
     }
 
+    public Reservation(String roomType, float price, int numberOfNights, boolean weekendStatus) {
+        this.roomType = roomType;
+        this.price = price;
+        this.numberOfNights = numberOfNights;
+        this.weekendStatus = weekendStatus;
+    }
+
     public String getRoomType() {
         return this.roomType;
     }

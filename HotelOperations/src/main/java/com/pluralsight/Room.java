@@ -13,6 +13,13 @@ public class Room {
         this.cleanStatus = true;
     }
 
+    public Room(int beds, float price, boolean occupiedStatus, boolean cleanStatus) {
+        this.beds = beds;
+        this.price = price;
+        this.occupiedStatus = occupiedStatus;
+        this.cleanStatus = cleanStatus;
+    }
+
     public int getNumberOfBeds() {
         return this.beds;
     }
