@@ -44,18 +44,29 @@ public class Employee {
     }
 
     public float getRegularHours() {
-        //Get the amount of hoursWorked that is NOT overtime
-        return 0.0f;
+        float hoursWorked = getHoursWorked(), hoursOver = 0.0f, payRate = getPayRate(), regularPay = 0.0f;
+        if(hoursWorked > 40.0) {
+            hoursOver = hoursWorked - 40.0f;
+            hoursWorked = hoursWorked - hoursOver;
+            regularPay = hoursWorked * payRate;
+        }
+        return regularPay;
     }
 
     public float getOvertimeHours() {
-        //Get the amount of overtime hours that were over the 40 hours.
-        return 0.0f;
+        float hoursWorked = getRegularHours(), hoursOver = 0.0f, payRate = getPayRate(), overTimePayRate = getPayRate() * 1.5f, overTimePay = 0.0f;
+        hoursOver = hoursWorked - 40.0f;
+        overTimePay = hoursOver * overTimePayRate;
+
+        return overTimePay;
     }
 
     public float getTotalPay() {
-        //hours worked * payRate
-        return 0.0f;
+        float totalPay;
+
+        totalPay = getRegularHours() + getOvertimeHours();
+
+        return totalPay;
     }
 
     @Override

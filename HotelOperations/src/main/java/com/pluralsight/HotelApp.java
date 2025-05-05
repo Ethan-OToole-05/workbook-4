@@ -18,6 +18,7 @@ public class HotelApp {
         System.out.println(reservation1);
         System.out.println(employee1);
         System.out.println(employee2);
+        System.out.println(employee2.getTotalPay());
 
 
     }
