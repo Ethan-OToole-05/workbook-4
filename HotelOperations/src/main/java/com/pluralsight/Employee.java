@@ -50,6 +50,9 @@ public class Employee {
             hoursWorked = hoursWorked - hoursOver;
             regularPay = hoursWorked * payRate;
         }
+        else {
+            regularPay = hoursWorked * payRate;
+        }
         return regularPay;
     }
 
