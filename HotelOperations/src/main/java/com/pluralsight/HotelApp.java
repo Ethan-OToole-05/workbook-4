@@ -23,8 +23,11 @@ public class HotelApp {
         room1.cleanRoom();
         System.out.println(room1);
 
-        
+
         System.out.println(employee1);
+        double hoursWorked = employee1.punchTimeCard(8.00f, 16.00f);
+        System.out.println("Total Hours worked this shift: " + hoursWorked);
+
         System.out.println(employee2);
         System.out.println("Employee1 Pay: $" + employee1.getTotalPay());
         System.out.println("Employee2 Pay: $" + employee2.getTotalPay());

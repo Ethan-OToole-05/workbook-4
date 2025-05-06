@@ -6,6 +6,8 @@ public class Employee {
     private String department;
     private float payRate;
     private float hoursWorked;
+    private double punchInTime;
+    private double punchOutTime;
 
     public Employee() {
         this.employeeId = (int) (Math.random() * 1000) + 1;
@@ -79,5 +81,28 @@ public class Employee {
     public String toString() {
         return String.format("Employee Id: %d | Name: %s | Department: %s | Pay Rate : $%.2f | Hours Worked: %.2f", employeeId, name, department, payRate, hoursWorked);
     }
+
+//    public double punchIn(double time) {
+//
+//        punchInTime = time;
+//        return punchInTime;
+//    }
+//
+//    public double punchOut(double time) {
+//        punchOutTime = time;
+//        return punchOutTime;
+//    }
+
+    public double punchTimeCard(double punchIn, double punchOut) {
+        punchInTime = punchIn;
+        punchOutTime = punchOut;
+        double totalHours = 0;
+
+        totalHours = punchOutTime - punchInTime;
+
+        return totalHours;
+
+    }
+
 
 }
