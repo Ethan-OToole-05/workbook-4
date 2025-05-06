@@ -24,6 +24,7 @@ public class HotelApp {
         System.out.println(room1);
 
 
+        //Testing out punchTimeCard to take in the punchIn time and the punchOut time and see the result.
         System.out.println(employee1);
         double hoursWorked = employee1.punchTimeCard(8.00f, 16.00f);
         System.out.println("Total Hours worked this shift: " + hoursWorked);
