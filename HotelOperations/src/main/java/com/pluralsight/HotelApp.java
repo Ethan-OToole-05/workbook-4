@@ -33,13 +33,17 @@ public class HotelApp {
         employee1.punchIn();
         employee2.punchOut();
 
+//        System.out.println(employee2);
+//        System.out.println("Employee1 Pay: $" + employee1.getTotalPay());
+//        System.out.println("Employee2 Pay: $" + employee2.getTotalPay());
 
 
-        System.out.println(employee2);
-        System.out.println("Employee1 Pay: $" + employee1.getTotalPay());
-        System.out.println("Employee2 Pay: $" + employee2.getTotalPay());
+        //Hotel Class tests
 
+        Hotel hotel = new Hotel("Hotel", 10, 10, 5, 5);
 
+        System.out.println(hotel.bookRoom(4, false));
+        System.out.println(hotel.bookRoom(4, true));
 
     }
 }
