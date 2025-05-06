@@ -1,5 +1,8 @@
 package com.pluralsight;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Employee {
     private int employeeId;
     private String name;
@@ -82,16 +85,32 @@ public class Employee {
         return String.format("Employee Id: %d | Name: %s | Department: %s | Pay Rate : $%.2f | Hours Worked: %.2f", employeeId, name, department, payRate, hoursWorked);
     }
 
-//    public double punchIn(double time) {
-//
-//        punchInTime = time;
-//        return punchInTime;
-//    }
-//
-//    public double punchOut(double time) {
-//        punchOutTime = time;
-//        return punchOutTime;
-//    }
+    public void punchIn() {
+        LocalDateTime time = LocalDateTime.now();
+        String formatTime = time.format(DateTimeFormatter.ofPattern("HH.mm"));
+        double convertTime = Double.parseDouble(formatTime);
+        punchInTime = convertTime;
+    }
+
+    public double punchIn(double time) {
+
+        punchInTime = time;
+        return punchInTime;
+    }
+
+    public void punchOut() {
+        LocalDateTime time = LocalDateTime.now();
+        String formatTime = time.format(DateTimeFormatter.ofPattern("HH.mm"));
+        double convertTime = Double.parseDouble(formatTime);
+        punchOutTime = convertTime;
+    }
+
+    public double punchOut(double time) {
+        punchOutTime = time;
+        return punchOutTime;
+    }
+
+
 
     public double punchTimeCard(double punchIn, double punchOut) {
         punchInTime = punchIn;

@@ -29,9 +29,16 @@ public class HotelApp {
         double hoursWorked = employee1.punchTimeCard(8.00f, 16.00f);
         System.out.println("Total Hours worked this shift: " + hoursWorked);
 
+        //Testing out overloaded methods for punchIn() and punchOut(). Converts LocalDateTime to doubles in method definitions.
+        employee1.punchIn();
+        employee2.punchOut();
+
+
+
         System.out.println(employee2);
         System.out.println("Employee1 Pay: $" + employee1.getTotalPay());
         System.out.println("Employee2 Pay: $" + employee2.getTotalPay());
+
 
 
     }
