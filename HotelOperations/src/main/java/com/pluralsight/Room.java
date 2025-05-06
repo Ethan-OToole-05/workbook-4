@@ -44,4 +44,24 @@ public class Room {
     public String toString() {
         return String.format("Number of beds: %s | Price a night: $%.2f | Occupied: %s | Clean Status: %s", beds, price, occupiedStatus, cleanStatus);
     }
+
+    public void checkIn() {
+
+        if(this.occupiedStatus || !this.cleanStatus) {
+            System.out.println("Sorry this room is unavailable.");
+        }
+        else {
+            this.occupiedStatus = true;
+            this.cleanStatus = false;
+        }
+
+    }
+
+    public void checkOut() {
+        this.occupiedStatus = false;
+    }
+
+    public void cleanRoom() {
+        this.cleanStatus = true;
+    }
 }

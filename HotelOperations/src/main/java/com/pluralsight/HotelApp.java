@@ -11,11 +11,19 @@ public class HotelApp {
         Employee employee1 = new Employee("John Doe", "Kitchen", 20.00f, 30.0f);
         Employee employee2 = new Employee("TestMan", "Security", 30.00f, 45.0f);
         System.out.println("Welcome to the best hotel!");
-        System.out.println("Here are all of our rooms: ");
+
+        //checkIn(), checkOut(), cleanRoom(), and checkIn() logic check.
         System.out.println(room1);
-        System.out.println(room2);
-        System.out.println(room3);
         System.out.println(reservation1);
+        room1.checkIn();
+        System.out.println(room1);
+        room1.checkIn();
+        room1.checkOut();
+        System.out.println(room1);
+        room1.cleanRoom();
+        System.out.println(room1);
+
+        
         System.out.println(employee1);
         System.out.println(employee2);
         System.out.println("Employee1 Pay: $" + employee1.getTotalPay());
