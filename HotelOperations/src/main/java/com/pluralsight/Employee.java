@@ -111,7 +111,6 @@ public class Employee {
     }
 
 
-
     public double punchTimeCard(double punchIn, double punchOut) {
         punchInTime = punchIn;
         punchOutTime = punchOut;
@@ -119,6 +118,7 @@ public class Employee {
 
         totalHours = punchOutTime - punchInTime;
 
+        this.hoursWorked += (float) totalHours;
         return totalHours;
 
     }
