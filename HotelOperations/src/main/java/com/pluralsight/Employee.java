@@ -48,6 +48,14 @@ public class Employee {
         return hoursWorked;
     }
 
+    public double getPunchInTime() {
+        return this.punchInTime;
+    }
+
+    public double getPunchOutTime() {
+        return this.punchOutTime;
+    }
+
     public float getRegularHours() {
         float hoursWorked = getHoursWorked(), hoursOver = 0.0f, payRate = getPayRate(), regularPay = 0.0f;
         if(hoursWorked > 40.0) {
