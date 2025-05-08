@@ -20,7 +20,7 @@ public class RoomTest {
         assertTrue(result);
         assertEquals(7.0, employee1.getPunchInTime());
 
-        //TEST FAILED NOT ADDING HOURSWORKED AFTER PUNCHING IN
+        //TEST FAILED NOT ADDING HOURSWORKED AFTER PUNCHING IN.
         assertTrue(hoursWorkedResult);
 
     }
